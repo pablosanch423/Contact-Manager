@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - View</title>
+</head>
+<body>
+    <li> 
+        name : <%= curUser.name %> 
+        email : <%= curUser.email %>
+        phone # : <%= curUser.phone %> 
+
+        <a href="/view/<% id %>">view</a>
+        <a href="/edit/<%= id %>">edit</a>
+        <a href="/delete/<%= id %>">delete</a>
+    </li>
+
+
+    <a href="/">Go Back</a>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts - Edit</title>
+</head>
+<body>
+    <ul>
+        <form action="/editContact" method="post">
+            <li> 
+                name : <input type="text" name="name" value="<%= User.name %>" id="name" >
+                email :<input type="email" name="email" value="<%= User.email %>" id="email" >
+                phone # : <input type="tel" name="phone" value="<%= User.phone %>" id="phone" >
+                <input type="submit">
+            </li>
+        </form>
+        <% Contacts.forEach(contact => { %>
+            <li> 
+                name : <%= contact.name %> 
+                email : <%= contact.email %>
+                phone # : <%= contact.phone %> 
+            </li>
+        <% }) %>  
+</body>
+</html>

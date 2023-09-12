@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Add</title>
+  </head>
+  <body>
+    <ul>
+      <% contacts.forEach(contact => { %>
+      <li>
+        name : <%= contact.name %> email : <%= contact.email %> phone # : <%=
+        contact.phone %>
+
+        <a href="/view/<% contact.id %>">view</a>
+        <a href="/edit/<%= contact.id %>">edit</a>
+        <a href="/delete/<%= contact.id %>">delete</a>
+      </li>
+      <% }) %>
+    </ul>
+
+    <form action="/addContact" method="post">
+      <label for="name">Enter First Name: </label>
+      <input type="text" name="name" placeholder="John Doe" id="name" />
+
+      <label for="email">Enter Email</label>
+      <input type="email" name="email" placeholder="abc@email.com" id="email" />
+
+      <label for="phone">Enter Phone Number</label>
+      <input type="tel" name="phone" placeholder="123-456-7890" id="phone" />
+
+      <input type="submit" />
+    </form>
+  </body>
+  <script src="/js/add.js"></script>
+</html>
